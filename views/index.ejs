@@ -1,23 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/normalize.css' />
     <link rel='stylesheet' href='/stylesheets/style.css' />
-
-    <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
-
     <link rel="import" href="/elements/hack-map.html">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
     <style>
       google-map {
         height: 600px;
       }
     </style>
+
+     <!--[if lt IE 9]>
+         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/
+            html5shiv.js"></script>
+      <![endif]-->
+
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
 
-    <hack-map></hack-map>
+    <header class="header">
+    	<div class="logo-container">
+	        <img src="/images/ActivateMKE_logo.png">
+	    </div>
+    </header>
+    <section>
+    	<div class="container-map">
+		<hack-map></hack-map>
+  		</div>
+    <section>
+ 	
+      
+    </section>
+    <footer>
+    </footer>
+
   </body>
 </html>
