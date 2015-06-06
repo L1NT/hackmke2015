@@ -1,8 +1,59 @@
+/* mobile first */
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#007a99;
 }
 
 a {
   color: #00B7FF;
+}
+
+
+.header{
+	height:75px;
+	width:100%;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+}
+
+.logo-container{
+	height:75px;
+	padding:10px;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	   justify-content: center;
+}
+
+.logo-container img{
+	max-width: 100%;
+	height: auto;
+}
+
+.container-map{
+	width:100%;
+	min-height: 475px;
+}
+.container-map img {
+	width: 100%;
+	height: auto;
+}
+
+
+
+@media all and (min-width: 25em) {
+	body {
+	  /*background-color:pink;*/
+	}
+}
+
+
+@media all and (min-width: 40.5em) {
+	body {
+	 /* background-color:lightgreen;*/
+	}
 }
