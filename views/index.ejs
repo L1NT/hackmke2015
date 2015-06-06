@@ -3,9 +3,25 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <link rel="import" href="/elements/hack-example.html">
+    <link rel="import" href="/bower_components/google-map/google-map.html">
+
+    <style>
+      google-map {
+        height: 600px;
+      }
+    </style>
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <hack-example owner="<%= title %>"></hack-example>
+    <google-map latitude="43.029614" longitude="-87.909111" showCenterMarker zoom="15">
+      <google-map-marker latitude="43.029614" longitude="-87.909111" title="HackMKE"></google-map-marker>
+    </google-map>
   </body>
 </html>
