@@ -3,9 +3,15 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+
+    <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+
+    <link rel="import" href="/elements/example.html">
   </head>
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
+
+    <hack-example owner="<%= title %>"></hack-example>
   </body>
 </html>
