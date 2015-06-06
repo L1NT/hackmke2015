@@ -6,8 +6,7 @@
 
     <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
 
-    <link rel="import" href="/elements/hack-example.html">
-    <link rel="import" href="/bower_components/google-map/google-map.html">
+    <link rel="import" href="/elements/hack-map.html">
 
     <style>
       google-map {
@@ -19,9 +18,6 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
 
-    <hack-example owner="<%= title %>"></hack-example>
-    <google-map latitude="43.029614" longitude="-87.909111" showCenterMarker zoom="15">
-      <google-map-marker latitude="43.029614" longitude="-87.909111" title="HackMKE"></google-map-marker>
-    </google-map>
+    <hack-map></hack-map>
   </body>
 </html>

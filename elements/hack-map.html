@@ -1,0 +1,75 @@
+<link rel="import"
+      href="/bower_components/polymer/polymer.html">
+<link rel="import" href="/bower_components/google-map/google-map.html">
+
+<dom-module id="hack-map">
+    <template>
+        <google-map
+                latitude="{{latitude}}"
+                longitude="{{longitude}}"
+                zoom="{{zoom}}"
+                showCenterMarker="{{showCenterMarker}}"
+                apiKey="AIzaSyAfeGSI9u8wcryhbjb1CXfwiE5C3LIz8O8"
+                >
+
+        </google-map>
+    </template>
+</dom-module>
+
+<script>
+
+    Polymer({
+        // properties and methods here
+        is: "hack-map",
+        created: function() {
+            var map = this;
+
+            // get geo location
+            if (navigator && navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(updateMapCenter);
+            }
+            else {
+                console.error('geolocaiton not supported.');
+            }
+
+            function updateMapCenter(position) {
+                map.properties.latitute = position.coords.latitude;
+                map.properties.longitude = position.coords.longitude;
+                var gMap = document.querySelector('google-map');
+                gMap.map = gMap;
+                gMap.latitude = map.properties.latitute;
+                gMap.longitude = map.properties.longitude;
+            }
+        },
+        addPin: function(lat, lon, title, info) {
+            var gMap = document.querySelector('google-map');
+            var pin = document.createElement('google-map-marker');
+
+            pin.latitude = lat;
+            pin.longitude = lon;
+            pin.title = title;
+            pin.innerHTML = info;
+
+//            gMap.appendChild(pin);
+            Polymer.dom(gMap).appendChild(pin);
+        },
+        properties: {
+            latitude: {
+                type: Number,
+                value: 43.029614
+            },
+            longitude: {
+                type: Number,
+                value: -87.909111
+            },
+            zoom: {
+                type: Number,
+                value: 16
+            },
+            showCenterMarker: {
+                type: Boolean,
+                value: true
+            }
+        }
+    });
+</script>
