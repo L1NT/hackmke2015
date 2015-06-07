@@ -1,0 +1,7 @@
+var orm = require('orm');
+
+orm.connect('sqlite://hackmke2015.db', function(err, db) {
+	var models = require('../models/models');
+	models(db, db.models);
+	db.sync();
+});

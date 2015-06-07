@@ -10,40 +10,31 @@ a {
   color: #00B7FF;
 }
 
-
-.header{
-	height:75px;
-	width:100%;
-	display:-webkit-box;
-	display:-webkit-flex;
-	display:-ms-flexbox;
-	display:flex;
+header {
+	height:150px;
 }
 
-.logo-container{
-	height:75px;
-	padding:10px;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-ms-flex-pack: center;
-	   justify-content: center;
-}
-
-.logo-container img{
-	max-width: 100%;
-	height: auto;
-}
-
-.container-map{
-	width:100%;
-	min-height: 475px;
-}
-.container-map img {
+.logo-container {
+	display: flex;
+	align-content: center;
 	width: 100%;
-	height: auto;
+}
+.logo-container img {
+	height: 150px;
+	margin: auto;
 }
 
+.container-map {
+	min-height: 475px;
+	padding: 0 35px;
+}
 
+.actions {
+	display: flex;
+}
+.actions input {
+	margin: auto;
+}
 
 @media all and (min-width: 25em) {
 	body {
