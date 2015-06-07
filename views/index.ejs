@@ -5,19 +5,37 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 
     <script src="/bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+    <script src="javascripts/main.js"></script>
 
     <link rel="import" href="/elements/hack-map.html">
 
     <style>
       google-map {
-        height: 600px;
+        height: 1200px;
       }
     </style>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-
-    <hack-map></hack-map>
+    <header>
+    	<div class="logo-container">
+	        <img src="/images/ActivateMKE_logo.png">
+	    </div>
+    </header>
+    
+	<div class="container-map">
+		<hack-map></hack-map>
+	</div>
+    
+    <div class="actions">
+    	<input type="image" src="images/Activate_MKE-04.png" />
+    	<input type="image" src="images/Activate_MKE-05.png" />
+    	<input type="image" src="images/Activate_MKE-06.png" />
+    	<input type="image" src="images/Activate_MKE-07.png" />
+    </div>
+    
+    <footer>
+    </footer>
   </body>
 </html>

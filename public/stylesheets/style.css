@@ -6,3 +6,42 @@ body {
 a {
   color: #00B7FF;
 }
+
+header {
+	height:150px;
+}
+
+.logo-container {
+	display: flex;
+	align-content: center;
+	width: 100%;
+}
+.logo-container img {
+	height: 150px;
+	margin: auto;
+}
+
+.container-map {
+	min-height: 475px;
+	padding: 0 35px;
+}
+
+.actions {
+	display: flex;
+}
+.actions input {
+	margin: auto;
+}
+
+@media all and (min-width: 25em) {
+	body {
+	  /*background-color:pink;*/
+	}
+}
+
+
+@media all and (min-width: 40.5em) {
+	body {
+	 /* background-color:lightgreen;*/
+	}
+}
